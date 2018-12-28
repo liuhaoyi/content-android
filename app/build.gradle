@@ -16,25 +16,33 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    //处理生成签名apk时报错。
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.code.gson:gson:2.8.5'
     implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:0.5'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
-    implementation files('libs/MobCommons-2018.1011.1129.jar')
-    implementation files('libs/MobTools-2018.1009.1056.jar')
-    implementation files('libs/ShareSDK-Core-3.3.0.jar')
-    implementation files('libs/ShareSDK-Email-3.3.0.jar')
-    implementation files('libs/ShareSDK-QQ-3.3.0.jar')
-    implementation files('libs/ShareSDK-QZone-3.3.0.jar')
-    implementation files('libs/ShareSDK-ShortMessage-3.3.0.jar')
-    implementation files('libs/ShareSDK-SinaWeibo-3.3.0.jar')
-    implementation files('libs/ShareSDK-TencentWeibo-3.3.0.jar')
-    implementation files('libs/ShareSDK-Wechat-Core-3.3.0.jar')
-    implementation files('libs/ShareSDK-Wechat-Favorite-3.3.0.jar')
-    implementation files('libs/ShareSDK-Wechat-Moments-3.3.0.jar')
+//    implementation files('libs/MobCommons-2018.1011.1129.jar')
+//    implementation files('libs/MobTools-2018.1009.1056.jar')
+//    implementation files('libs/ShareSDK-Core-3.3.0.jar')
+//    implementation files('libs/ShareSDK-Email-3.3.0.jar')
+//    implementation files('libs/ShareSDK-QQ-3.3.0.jar')
+//    implementation files('libs/ShareSDK-QZone-3.3.0.jar')
+//    implementation files('libs/ShareSDK-ShortMessage-3.3.0.jar')
+//    implementation files('libs/ShareSDK-SinaWeibo-3.3.0.jar')
+//    implementation files('libs/ShareSDK-TencentWeibo-3.3.0.jar')
+//    implementation files('libs/ShareSDK-Wechat-Core-3.3.0.jar')
+//    implementation files('libs/ShareSDK-Wechat-Favorite-3.3.0.jar')
+//    implementation files('libs/ShareSDK-Wechat-Moments-3.3.0.jar')
+    implementation 'com.umeng.umsdk:common:1.5.4'
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
 }

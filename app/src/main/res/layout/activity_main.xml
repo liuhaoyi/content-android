@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.liuhy.myapp2.MainActivity">
+    tools:context="com.example.liuhy.myapp2.com.example.liuhy.news.MainActivity">
 
     <WebView
         android:id="@+id/webView"
@@ -14,4 +14,20 @@
         tools:layout_editor_absoluteY="29dp">
 
     </WebView>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:src="@drawable/logo2"
+        android:scaleType="fitXY"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+        />
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:src="@drawable/logo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+
+        <!--/>-->
+
 </android.support.constraint.ConstraintLayout>
