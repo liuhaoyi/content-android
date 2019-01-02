@@ -75,7 +75,7 @@ public class Android2JS extends Object{
 ////                    .withMedia(web)
 ////                    .share();
 //
-            new ShareAction(this.activity).withMedia(web).setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN).setCallback(shareListener).open();
+            new ShareAction(this.activity).withMedia(web).setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN,SHARE_MEDIA.WEIXIN_CIRCLE,SHARE_MEDIA.WEIXIN_FAVORITE).setCallback(shareListener).open();
 //
 //            //仅显示标题
 //            new ShareAction(this.activity).withText(str).setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN)

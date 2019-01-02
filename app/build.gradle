@@ -10,10 +10,40 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        myConfig {
+            storeFile file("./release.jks")
+            storePassword "123456"
+            keyAlias "news"
+            keyPassword "123456"
+        }
+    }
     buildTypes {
-        release {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+        debug {
+            signingConfig signingConfigs.myConfig
             minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            ndk {
+//                abiFilters "armeabi", "armeabi-v7a"
+//            }
+        }
+
+        release {
+            signingConfig signingConfigs.myConfig
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            ndk {
+//                abiFilters "armeabi", "armeabi-v7a"
+//            }
         }
     }
     //处理生成签名apk时报错。
